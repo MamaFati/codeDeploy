@@ -30,8 +30,8 @@ jobs:
     - name: Deploy to AWS CodeDeploy
       run: |
         aws deploy create-deployment \
-          --application-name TodoApi \
-          --deployment-group-name TodoApiGroup \
+          --application-name todoApi \
+          --deployment-group-name todoApiGroup \
           --github-location repository=${{ github.repository }},commitId=${{ github.sha }}      
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
